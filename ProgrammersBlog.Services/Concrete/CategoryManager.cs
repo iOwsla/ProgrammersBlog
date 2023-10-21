@@ -55,7 +55,12 @@ namespace ProgrammersBlog.Services.Concrete
         });
       }
 
-      return new DataResult<CategoryListDto>(ResultStatus.Error, "Hiçbir kategori bulunamadı", null);
+      return new DataResult<CategoryListDto>(ResultStatus.Error, "Hiçbir kategori bulunamadı", new CategoryListDto
+      {
+        Categories = null,
+        ResultStatus = ResultStatus.Error,
+        Message = "Hiçbir kategori bulunamadı"
+      });
     }
 
     public async Task<IDataResult<CategoryListDto>> GetAllByNonDeleted()
@@ -72,7 +77,12 @@ namespace ProgrammersBlog.Services.Concrete
         });
       }
 
-      return new DataResult<CategoryListDto>(ResultStatus.Error, "Hiçbir kategori bulunamadı", null);
+      return new DataResult<CategoryListDto>(ResultStatus.Error, "Hiçbir kategori bulunamadı", new CategoryListDto
+      {
+        Categories = null,
+        ResultStatus = ResultStatus.Error,
+        Message = "Hiçbir kategori bulunamadı"
+      });
     }
 
     public async Task<IDataResult<CategoryListDto>> GetAllByNonDeletedAndActive()
@@ -89,7 +99,12 @@ namespace ProgrammersBlog.Services.Concrete
         });
       }
 
-      return new DataResult<CategoryListDto>(ResultStatus.Error, "Hiçbir kategori bulunamadı", null);
+      return new DataResult<CategoryListDto>(ResultStatus.Error, "Hiçbir kategori bulunamadı", new CategoryListDto
+      {
+        Categories = null,
+        ResultStatus = ResultStatus.Error,
+        Message = "Hiçbir kategori bulunamadı"
+      });
     }
 
     public async Task<IResult> Add(CategoryAddDto categoryAddDto, string createdByName)
